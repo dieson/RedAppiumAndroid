@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ResetPassword]" allow-return-values="true">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="Reset password test(failed)">
+    <classes>
+      <class name="com.appium.iOS_testcase.ResetPasswordTest">
+        <methods>
+          <include name="resetPassword" invocation-numbers="0"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.appium.iOS_testcase.ResetPasswordTest -->
+    </classes>
+  </test> <!-- Reset password test(failed) -->
+</suite> <!-- Failed suite [ResetPassword] -->

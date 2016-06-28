@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [GoTO Page]">
+  <parameter name="passWord" value="dieson"/>
+  <parameter name="country" value="Australia"/>
+  <parameter name="titleName" value="0JVV-Legal commentry of NSW UO"/>
+  <parameter name="userName" value="dieson@lexisred.com"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="GoTO Page test(failed)">
+    <parameter name="passWord" value="dieson"/>
+    <parameter name="country" value="Australia"/>
+    <parameter name="titleName" value="0JVV-Legal commentry of NSW UO"/>
+    <parameter name="userName" value="dieson@lexisred.com"/>
+    <classes>
+      <class name="com.appium.Android_testcase.GoToTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="gotoPageTest" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.appium.Android_testcase.GoToTest -->
+    </classes>
+  </test> <!-- GoTO Page test(failed) -->
+</suite> <!-- Failed suite [GoTO Page] -->

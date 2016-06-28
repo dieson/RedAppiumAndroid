@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login test"
+           tests="7"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="166.531">
+  <properties />
+  
+  
+            <testcase name="login" time="25.583" classname="com.appium.Android_testcase.LoginTest" />
+                <testcase name="login" time="24.837" classname="com.appium.Android_testcase.LoginTest" />
+                <testcase name="login" time="26.347" classname="com.appium.Android_testcase.LoginTest" />
+                <testcase name="login" time="23.653" classname="com.appium.Android_testcase.LoginTest" />
+                <testcase name="login" time="21.945" classname="com.appium.Android_testcase.LoginTest" />
+                <testcase name="login" time="21.246" classname="com.appium.Android_testcase.LoginTest" />
+                <testcase name="login" time="22.920" classname="com.appium.Android_testcase.LoginTest" />
+      
+</testsuite>

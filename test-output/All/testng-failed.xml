@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [All]">
+  <parameter name="titleName" value="0JVV-Legal commentry of NSW UO"/>
+  <parameter name="userName" value="86341949@qq.com"/>
+  <parameter name="passWord" value="dieson"/>
+  <parameter name="country" value="Australia"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="All test">
+    <parameter name="titleName" value="0JVV-Legal commentry of NSW UO"/>
+    <parameter name="userName" value="86341949@qq.com"/>
+    <parameter name="passWord" value="dieson"/>
+    <parameter name="country" value="Australia"/>
+    <classes>
+      <class name="com.appium.Android_testcase.Demo"/>
+    </classes>
+  </test> <!-- All test -->
+  <test name="All test(failed)">
+    <parameter name="titleName" value="0JVV-Legal commentry of NSW UO"/>
+    <parameter name="userName" value="86341949@qq.com"/>
+    <parameter name="passWord" value="dieson"/>
+    <parameter name="country" value="Australia"/>
+    <classes>
+      <class name="com.appium.Android_testcase.Demo">
+        <methods>
+          <include name="logout"/>
+          <include name="search"/>
+          <include name="filterPublication"/>
+          <include name="download"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="login" invocation-numbers="0"/>
+          <include name="TOCHide"/>
+          <include name="contact"/>
+          <include name="index"/>
+          <include name="recentHistory"/>
+        </methods>
+      </class> <!-- com.appium.Android_testcase.Demo -->
+    </classes>
+  </test> <!-- All test(failed) -->
+</suite> <!-- Failed suite [All] -->

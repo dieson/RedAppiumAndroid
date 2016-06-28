@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ResentHistory]">
+  <parameter name="passWord" value="dieson"/>
+  <parameter name="country" value="Australia"/>
+  <parameter name="userName" value="dieson@lexisred.com"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="ResentHistory test(failed)">
+    <parameter name="passWord" value="dieson"/>
+    <parameter name="country" value="Australia"/>
+    <parameter name="userName" value="dieson@lexisred.com"/>
+    <classes>
+      <class name="com.appium.Android_testcase.RecentHistoryTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="maxHistoryNO"/>
+        </methods>
+      </class> <!-- com.appium.Android_testcase.RecentHistoryTest -->
+    </classes>
+  </test> <!-- ResentHistory test(failed) -->
+</suite> <!-- Failed suite [ResentHistory] -->

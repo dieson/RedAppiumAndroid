@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>TestNG:  ContactUs test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ContactUs test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 24 14:48:10 CST 2015</td>
+</tr>
+<tr><td>Total time:</td><td>73 seconds (73426 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.appium.Android_testcase.ContactAndScrollTest.login()'><b>login</b><br>Test class: com.appium.Android_testcase.ContactAndScrollTest<br>Parameters: {emailExpect=techsupport@lexisnexis.com.au, postDx=Street Address: LexisNexis
+DX 29590 Chatswood
+Tower 2, 475-495 Victoria Avenue
+Chatswood NSW 2067, contactIconExpect=Contact us, postDxExpect=Street Address: LexisNexis
+DX 29590 Chatswood
+Tower 2, 475-495 Victoria Avenue
+Chatswood NSW 2067, postExpect=Level 9
+Locked Bag 2222 Chatswood Delivery Centre
+Chatswood NSW 2067, call=+61 2 9422 2174, contactIcon=Contact us, phoneExpect=1800 999 906, post=Level 9
+Locked Bag 2222 Chatswood Delivery Centre
+Chatswood NSW 2067, phone=1800 999 906, callExpect=+61 2 9422 2174, faxExpect=02 9422 2405, fax=02 9422 2405, email=techsupport@lexisnexis.com.au}<br/>
+<a href="#Output-26757919" onClick='toggleBox("Output-26757919", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-26757919" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-26757919">
+[2015-12-24 14:48:32][Successful] Find the element<br/>
+[2015-12-24 14:48:41][Successful] username input:dieson@lexisred.com<br/>
+[2015-12-24 14:48:42][Successful] Find the element<br/>
+[2015-12-24 14:48:50][Successful] password input:dieson<br/>
+[2015-12-24 14:48:51][Successful] Find the element<br/>
+[2015-12-24 14:48:51][Successful] Click the country<br/>
+[2015-12-24 14:48:52][Successful] Find the element<br/>
+[2015-12-24 14:48:53][Successful] Click the Australia<br/>
+[2015-12-24 14:48:53][Successful] Find the element<br/>
+[2015-12-24 14:48:54][Successful] Click the login<br/>
+[2015-12-24 14:49:10][Successful] Slide: Publication (1000,400) => (100,400)<br/>
+[2015-12-24 14:49:10][Successful] Find the element<br/>
+[2015-12-24 14:49:11][Successful] Click the Options<br/>
+[2015-12-24 14:49:11][Successful] Find the element<br/>
+[2015-12-24 14:49:12][Successful] Click the Contact Us<br/>
+[2015-12-24 14:49:13][Successful] Find the element<br/>
+[2015-12-24 14:49:13][Successful] Get the Contact Icon<br/>
+[2015-12-24 14:49:13][Successful] Find the element<br/>
+[2015-12-24 14:49:13][Successful] Get the Phone Number<br/>
+[2015-12-24 14:49:13][Successful] Find the element<br/>
+[2015-12-24 14:49:13][Successful] Get the Call Number<br/>
+[2015-12-24 14:49:13][Successful] Find the element<br/>
+[2015-12-24 14:49:13][Successful] Get the Fax Number<br/>
+[2015-12-24 14:49:13][Successful] Find the element<br/>
+[2015-12-24 14:49:13][Successful] Get the Email Address<br/>
+[2015-12-24 14:49:13][Successful] Find the element<br/>
+[2015-12-24 14:49:13][Successful] Get the Post Address<br/>
+[2015-12-24 14:49:13][Successful] Find the element<br/>
+[2015-12-24 14:49:13][Successful] Get the PostDx Address<br/>
+[2015-12-24 14:49:14]contactIcon:Contact us<br/>
+[2015-12-24 14:49:14]phone:1800 999 906<br/>
+[2015-12-24 14:49:14]call:+61 2 9422 2174<br/>
+[2015-12-24 14:49:14]fax:02 9422 2405<br/>
+[2015-12-24 14:49:14]email:techsupport@lexisnexis.com.au<br/>
+[2015-12-24 14:49:14]post:Level 9
+Locked Bag 2222 Chatswood Delivery Centre
+Chatswood NSW 2067<br/>
+[2015-12-24 14:49:14]postDx:Street Address: LexisNexis
+DX 29590 Chatswood
+Tower 2, 475-495 Victoria Avenue
+Chatswood NSW 2067<br/>
+[2015-12-24 14:49:14][Successful] Find the element<br/>
+[2015-12-24 14:49:17][Successful] Click the Back<br/>
+[2015-12-24 14:49:18][Successful] Find the element<br/>
+[2015-12-24 14:49:18][Successful] Click the options<br/>
+[2015-12-24 14:49:19][Successful] Find the element<br/>
+[2015-12-24 14:49:20][Successful] Click the lougout<br/>
+[2015-12-24 14:49:20][Successful] Find the element<br/>
+[2015-12-24 14:49:21][Successful] Click the confirm<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>com.appium.Android_testcase.ContactAndScrollTest@59f99ea</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<html>
+<head>
+<title>TestNG:  Login test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Login test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Dec 15 16:54:51 CST 2015</td>
+</tr>
+<tr><td>Total time:</td><td>215 seconds (215865 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.appium.Android_testcase.LoginTest.login()'><b>login</b><br>Test class: com.appium.Android_testcase.LoginTest<br>Parameters: {msgExpect=Either the email address or password you entered is incorrect., country=Australia, password=dieson1, username=dieson@lexisred.com, msgActual=Either the email address or password you entered is incorrect.}<br/>
+<a href="#Output-1209770703" onClick='toggleBox("Output-1209770703", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1209770703" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1209770703">
+[2015-12-15 16:55:41][Successful] Find the element<br/>
+[2015-12-15 16:55:44][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etEmail]<br/>
+[2015-12-15 16:55:49][Successful] username input:dieson@lexisred.com<br/>
+[2015-12-15 16:55:50][Successful] Find the element<br/>
+[2015-12-15 16:55:52][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etPassword]<br/>
+[2015-12-15 16:55:57][Successful] password input:dieson1<br/>
+[2015-12-15 16:55:58][Successful] Find the element<br/>
+[2015-12-15 16:55:58][Successful] Click the country<br/>
+[2015-12-15 16:55:59][Successful] Find the element<br/>
+[2015-12-15 16:56:00][Successful] Click the Australia<br/>
+[2015-12-15 16:56:00][Successful] Find the element<br/>
+[2015-12-15 16:56:01][Successful] Click the login<br/>
+[2015-12-15 16:56:03][Successful] Find the element<br/>
+[2015-12-15 16:56:03][Successful] Get the loginMsg<br/>
+[2015-12-15 16:56:03]msgActual:Either the email address or password you entered is incorrect.<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>com.appium.Android_testcase.LoginTest@26653222</td></tr>
+<tr>
+<td title='com.appium.Android_testcase.LoginTest.login()'><b>login</b><br>Test class: com.appium.Android_testcase.LoginTest<br>Parameters: {msgExpect=Please enter both your email address and password to log in., country=Australia, password=, username=, msgActual=The email address you entered is not correct.}<br/>
+<a href="#Output-1424482154" onClick='toggleBox("Output-1424482154", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1424482154" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1424482154">
+[2015-12-15 16:56:03][Successful] Find the element<br/>
+[2015-12-15 16:56:09][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etEmail]<br/>
+[2015-12-15 16:56:14][Successful] username input:<br/>
+[2015-12-15 16:56:14][Successful] Find the element<br/>
+[2015-12-15 16:56:16][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etPassword]<br/>
+[2015-12-15 16:56:21][Successful] password input:<br/>
+[2015-12-15 16:56:21][Successful] Find the element<br/>
+[2015-12-15 16:56:22][Successful] Click the country<br/>
+[2015-12-15 16:56:23][Successful] Find the element<br/>
+[2015-12-15 16:56:23][Successful] Click the Australia<br/>
+[2015-12-15 16:56:24][Successful] Find the element<br/>
+[2015-12-15 16:56:24][Successful] Click the login<br/>
+[2015-12-15 16:56:24][Successful] Find the element<br/>
+[2015-12-15 16:56:24][Successful] Get the loginMsg<br/>
+[2015-12-15 16:56:24]msgActual:The email address you entered is not correct.<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>com.appium.Android_testcase.LoginTest@26653222</td></tr>
+<tr>
+<td title='com.appium.Android_testcase.LoginTest.login()'><b>login</b><br>Test class: com.appium.Android_testcase.LoginTest<br>Parameters: {msgExpect=Either the email address or password you entered is incorrect., country=Australia, password=dieson, username=dieson@com, msgActual=Either the email address or password you entered is incorrect.}<br/>
+<a href="#Output-1331270134" onClick='toggleBox("Output-1331270134", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1331270134" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1331270134">
+[2015-12-15 16:56:24][Successful] Find the element<br/>
+[2015-12-15 16:56:27][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etEmail]<br/>
+[2015-12-15 16:56:32][Successful] username input:dieson@com<br/>
+[2015-12-15 16:56:33][Successful] Find the element<br/>
+[2015-12-15 16:56:38][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etPassword]<br/>
+[2015-12-15 16:56:44][Successful] password input:dieson<br/>
+[2015-12-15 16:56:44][Successful] Find the element<br/>
+[2015-12-15 16:56:44][Successful] Click the country<br/>
+[2015-12-15 16:56:46][Successful] Find the element<br/>
+[2015-12-15 16:56:46][Successful] Click the Australia<br/>
+[2015-12-15 16:56:47][Successful] Find the element<br/>
+[2015-12-15 16:56:47][Successful] Click the login<br/>
+[2015-12-15 16:56:47][Successful] Find the element<br/>
+[2015-12-15 16:56:47][Successful] Get the loginMsg<br/>
+[2015-12-15 16:56:47]msgActual:Either the email address or password you entered is incorrect.<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>com.appium.Android_testcase.LoginTest@26653222</td></tr>
+<tr>
+<td title='com.appium.Android_testcase.LoginTest.login()'><b>login</b><br>Test class: com.appium.Android_testcase.LoginTest<br>Parameters: {msgExpect=Either the email address or password you entered is incorrect., country=Australia, password=1234.0, username=dieson@lexisred.com, msgActual=Either the email address or password you entered is incorrect.}<br/>
+<a href="#Output-211090736" onClick='toggleBox("Output-211090736", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-211090736" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-211090736">
+[2015-12-15 16:56:48][Successful] Find the element<br/>
+[2015-12-15 16:56:53][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etEmail]<br/>
+[2015-12-15 16:56:58][Successful] username input:dieson@lexisred.com<br/>
+[2015-12-15 16:56:59][Successful] Find the element<br/>
+[2015-12-15 16:57:04][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etPassword]<br/>
+[2015-12-15 16:57:10][Successful] password input:1234.0<br/>
+[2015-12-15 16:57:10][Successful] Find the element<br/>
+[2015-12-15 16:57:11][Successful] Click the country<br/>
+[2015-12-15 16:57:12][Successful] Find the element<br/>
+[2015-12-15 16:57:12][Successful] Click the Australia<br/>
+[2015-12-15 16:57:13][Successful] Find the element<br/>
+[2015-12-15 16:57:13][Successful] Click the login<br/>
+[2015-12-15 16:57:14][Successful] Find the element<br/>
+[2015-12-15 16:57:14][Successful] Get the loginMsg<br/>
+[2015-12-15 16:57:14]msgActual:Either the email address or password you entered is incorrect.<br/>
+</div>
+</td>
+<td></td>
+<td>26</td>
+<td>com.appium.Android_testcase.LoginTest@26653222</td></tr>
+<tr>
+<td title='com.appium.Android_testcase.LoginTest.login()'><b>login</b><br>Test class: com.appium.Android_testcase.LoginTest<br>Parameters: {msgExpect=Please enter both your email and password to log in., country=Australia, password=, username=dieson@lexisred.com, msgActual=Please enter both your email and password to log in.}<br/>
+<a href="#Output-1997548433" onClick='toggleBox("Output-1997548433", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1997548433" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1997548433">
+[2015-12-15 16:57:14][Successful] Find the element<br/>
+[2015-12-15 16:57:20][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etEmail]<br/>
+[2015-12-15 16:57:25][Successful] username input:dieson@lexisred.com<br/>
+[2015-12-15 16:57:25][Successful] Find the element<br/>
+[2015-12-15 16:57:31][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etPassword]<br/>
+[2015-12-15 16:57:36][Successful] password input:<br/>
+[2015-12-15 16:57:36][Successful] Find the element<br/>
+[2015-12-15 16:57:36][Successful] Click the country<br/>
+[2015-12-15 16:57:38][Successful] Find the element<br/>
+[2015-12-15 16:57:38][Successful] Click the Australia<br/>
+[2015-12-15 16:57:38][Successful] Find the element<br/>
+[2015-12-15 16:57:39][Successful] Click the login<br/>
+[2015-12-15 16:57:39][Successful] Find the element<br/>
+[2015-12-15 16:57:39][Successful] Get the loginMsg<br/>
+[2015-12-15 16:57:39]msgActual:Please enter both your email and password to log in.<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>com.appium.Android_testcase.LoginTest@26653222</td></tr>
+<tr>
+<td title='com.appium.Android_testcase.LoginTest.login()'><b>login</b><br>Test class: com.appium.Android_testcase.LoginTest<br>Parameters: {msgExpect=The email address you entered is not correct., country=Australia, password=dieson, username=, msgActual=The email address you entered in not correct.
+Please enter both your email address and password to log in.}<br/>
+<a href="#Output-1688470144" onClick='toggleBox("Output-1688470144", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1688470144" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1688470144">
+[2015-12-15 16:57:39][Successful] Find the element<br/>
+[2015-12-15 16:57:45][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etEmail]<br/>
+[2015-12-15 16:57:50][Successful] username input:<br/>
+[2015-12-15 16:57:50][Successful] Find the element<br/>
+[2015-12-15 16:57:53][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etPassword]<br/>
+[2015-12-15 16:57:59][Successful] password input:dieson<br/>
+[2015-12-15 16:57:59][Successful] Find the element<br/>
+[2015-12-15 16:58:00][Successful] Click the country<br/>
+[2015-12-15 16:58:01][Successful] Find the element<br/>
+[2015-12-15 16:58:01][Successful] Click the Australia<br/>
+[2015-12-15 16:58:02][Successful] Find the element<br/>
+[2015-12-15 16:58:02][Successful] Click the login<br/>
+[2015-12-15 16:58:03][Successful] Find the element<br/>
+[2015-12-15 16:58:03][Successful] Get the loginMsg<br/>
+[2015-12-15 16:58:03]msgActual:The email address you entered in not correct.
+Please enter both your email address and password to log in.<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>com.appium.Android_testcase.LoginTest@26653222</td></tr>
+<tr>
+<td title='com.appium.Android_testcase.LoginTest.login()'><b>login</b><br>Test class: com.appium.Android_testcase.LoginTest<br>Parameters: {msgExpect=Please enter both your email and password to log in., country=Australia, password=, username=dieson@163.com, msgActual=Please enter both your email and password to log in.}<br/>
+<a href="#Output-729218894" onClick='toggleBox("Output-729218894", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-729218894" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-729218894">
+[2015-12-15 16:58:03][Successful] Find the element<br/>
+[2015-12-15 16:58:09][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etEmail]<br/>
+[2015-12-15 16:58:14][Successful] username input:dieson@163.com<br/>
+[2015-12-15 16:58:15][Successful] Find the element<br/>
+[2015-12-15 16:58:17][[AndroidDriver: Android on LINUX (d9a1ad57-8e2c-4cf5-a50e-2b259b37b930)] -> id: LexisNexis.Red.Android:id/etPassword]<br/>
+[2015-12-15 16:58:22][Successful] password input:<br/>
+[2015-12-15 16:58:22][Successful] Find the element<br/>
+[2015-12-15 16:58:22][Successful] Click the country<br/>
+[2015-12-15 16:58:23][Successful] Find the element<br/>
+[2015-12-15 16:58:24][Successful] Click the Australia<br/>
+[2015-12-15 16:58:24][Successful] Find the element<br/>
+[2015-12-15 16:58:24][Successful] Click the login<br/>
+[2015-12-15 16:58:25][Successful] Find the element<br/>
+[2015-12-15 16:58:25][Successful] Get the loginMsg<br/>
+[2015-12-15 16:58:25]msgActual:Please enter both your email and password to log in.<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>com.appium.Android_testcase.LoginTest@26653222</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ResentHistory test"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="227.670">
+  <properties />
+  
+  
+            <testcase name="maxHistoryNO" time="171.090" classname="com.appium.Android_testcase.RecentHistoryTest" />
+                <testcase name="recentHistory" time="56.580" classname="com.appium.Android_testcase.RecentHistoryTest" />
+      
+</testsuite>

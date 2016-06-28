@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TOC test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="27.136">
+  <properties />
+  
+  
+            <testcase name="TOC" time="27.136" classname="com.appium.Android_testcase.TOCTest" />
+      
+</testsuite>
