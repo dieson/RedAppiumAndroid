@@ -11,12 +11,12 @@
 	<artifactId>Appium_Java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<properties>  
-        	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
-       		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>  
-        	<maven.compiler.encoding>UTF-8</maven.compiler.encoding>  
-   	</properties>  
-	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+	</properties>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -30,25 +30,40 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.6</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>Android/demo.xml</suiteXmlFile>
+						<suiteXmlFile>Android/Login.xml</suiteXmlFile>
+						<suiteXmlFile>Android/Remember.xml</suiteXmlFile>
+						<suiteXmlFile>Android/RememberPassword.xml</suiteXmlFile>
+						<suiteXmlFile>Android/RememberPasswordInChange.xml</suiteXmlFile>
+						<suiteXmlFile>Android/ContactAndScroll.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>Android/Download.xml</suiteXmlFile> -->
+						<suiteXmlFile>Android/Group.xml</suiteXmlFile>
+						<suiteXmlFile>Android/TOC.xml</suiteXmlFile>
+						<suiteXmlFile>Android/RecentHistory.xml</suiteXmlFile>
+						<suiteXmlFile>Android/FTC.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>Android/GoToPage.xml</suiteXmlFile> -->
+						<!-- <suiteXmlFile>Android/Index.xml</suiteXmlFile> -->
+						<suiteXmlFile>Android/Tags.xml</suiteXmlFile>
+						<suiteXmlFile>Android/AnnotationEdit.xml</suiteXmlFile>
+						<suiteXmlFile>Android/Annotations.xml</suiteXmlFile>
+						<suiteXmlFile>Android/DocumentName.xml</suiteXmlFile>
+						<!-- <suiteXmlFile>Android/ExpandGroup.xml</suiteXmlFile> -->
+						<!-- <suiteXmlFile>Android/FilterPubInGroup.xml</suiteXmlFile> -->
+						<!-- <suiteXmlFile>Android/HVTitleName.xml</suiteXmlFile> -->
+						<!-- <suiteXmlFile>Android/InternetMsgPage.xml</suiteXmlFile> -->
+						<!-- <suiteXmlFile>Android/Pinch.xml</suiteXmlFile> -->
+						<suiteXmlFile>Android/DocumentName.xml</suiteXmlFile>
+						<suiteXmlFile>Android/Group.xml</suiteXmlFile>
+						<suiteXmlFile>Android/PublicationSearch.xml</suiteXmlFile>
+						<suiteXmlFile>Android/Logout.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 
 	<dependencies>
 		<dependency>

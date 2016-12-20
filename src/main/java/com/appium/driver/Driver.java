@@ -1,18 +1,19 @@
 package com.appium.driver;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
+
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 
 import com.appium.utils.OsUtils;
 import com.appium.utils.ReportUtils;
 import com.appium.utils.Utils;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.ios.IOSDriver;
 
 /**
  * Start driver
@@ -45,9 +46,8 @@ public class Driver {
 	public void startAndroid() {
 		try {
 			String path = System.getProperty("user.dir") + Utils.getSystemProperties("APPANDROID");
-			
+
 			capabilities.setCapability("deviceName", OsUtils.getDeviceName());
-//			capabilities.setCapability("deviceName", "emulator-5554");
 			capabilities.setCapability("platformVersion", Utils.getSystemProperties("PLATFORMVERSIONANDROID"));
 			capabilities.setCapability("platformName", Utils.getSystemProperties("PLATFORMNAMEANDROID"));
 			capabilities.setCapability("appPackage", Utils.getSystemProperties("APPPACKAGEANDROID"));
@@ -55,9 +55,9 @@ public class Driver {
 			capabilities.setCapability("app", path);
 			capabilities.setCapability("unicodeKeyboard", "true");
 			capabilities.setCapability("resetKeyboard", "true");
-
+			
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-//			driver.rotate(ScreenOrientation.PORTRAIT);
+			driver.rotate(ScreenOrientation.PORTRAIT);
 		} catch (Exception e) {
 			report.errorLog(e.toString());
 		}

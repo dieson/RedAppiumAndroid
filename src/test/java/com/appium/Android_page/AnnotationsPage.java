@@ -91,7 +91,7 @@ public class AnnotationsPage extends BaseScreen {
 			screen.wait(1);
 			screen.swipe(650, 540, 650, 320, "Edit Tags");
 		}
-		screen.press(900, 300);
+		screen.tap(900, 300);
 
 		WebElement elementLeft = null;
 		String path = "NAME:" + x;

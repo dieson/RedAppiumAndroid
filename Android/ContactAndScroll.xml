@@ -7,7 +7,7 @@
 	    <parameter name="passWord" value="dieson" />
 	    <parameter name="country" value="Australia" />
 		<classes>
-			<class name="com.appium.Android_testcase.ContactAndScrollTest" />
+			<class name="com.appium.Android.TestCaseNew.ContactAndScrollTest" /><!-- Dieson -->
 		</classes>
 	</test>
 

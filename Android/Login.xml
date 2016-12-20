@@ -3,8 +3,11 @@
 <suite name="Login" parallel="false">
 
 	<test name="Login test">
+		<parameter name="userName" value="dieson@lexisred.com" />
+		<parameter name="passWord" value="dieson" />
+		<parameter name="country" value="Australia" />
 		<classes>
-			<class name="com.appium.Android_testcase.LoginTest" />
+			<class name="com.appium.Android.TestCaseNew.LoginTest" /><!-- Dieson -->
 		</classes>
 	</test>
 

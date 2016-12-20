@@ -12,6 +12,7 @@ import java.util.List;
  * @author Dieson Zuo
  */
 public class FindElement extends DriverUtils {
+	
 	public List<WebElement> findElements(String locator) {
 		String locatorType = Utils.getLocatorType(locator);
 		String locatorStr = Utils.getLocatorStr(locator);
@@ -72,6 +73,42 @@ public class FindElement extends DriverUtils {
 				break;
 			case "TAGNAME":
 				element = elementHigher.findElements(By.tagName(locatorStr));
+				break;
+			default:
+				break;
+			}
+			report.log("[Successful] Find the element");
+		} catch (Exception e) {
+			report.errorLog("[Fail] Unable find element");
+			report.errorLog(e.toString());
+		}
+		return element;
+	}
+	
+	public List<WebElement> findElements(String elementHigher, String locator) {
+		String locatorType = Utils.getLocatorType(locator);
+		String locatorStr = Utils.getLocatorStr(locator);
+		List<WebElement> element = null;
+
+		try {
+			switch (locatorType) {
+			case "XPATH":
+				element = this.findElement(elementHigher).findElements(By.xpath(locatorStr));
+				break;
+			case "ID":
+				element = this.findElement(elementHigher).findElements(By.id(locatorStr));
+				break;
+			case "CLASS":
+				element = this.findElement(elementHigher).findElements(By.className(locatorStr));
+				break;
+			case "NAME":
+				element = this.findElement(elementHigher).findElements(By.name(locatorStr));
+				break;
+			case "LINKTEXT":
+				element = this.findElement(elementHigher).findElements(By.linkText(locatorStr));
+				break;
+			case "TAGNAME":
+				element = this.findElement(elementHigher).findElements(By.tagName(locatorStr));
 				break;
 			default:
 				break;

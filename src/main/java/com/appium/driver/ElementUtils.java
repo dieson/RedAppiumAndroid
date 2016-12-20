@@ -43,6 +43,28 @@ public class ElementUtils extends FindElement {
 			Assert.fail();
 		}
 	}
+	
+	public void click(WebElement element, String elementName) {
+		try {
+			element.click();
+			report.log("[Successful] Click the " + elementName);
+		} catch (Exception e) {
+			screenshot(elementName);
+			report.errorLog("[Fail] Unable to click");
+			Assert.fail();
+		}
+	}
+	
+	public void click(WebElement element, String locator, String elementName) {
+		try {
+			super.findElement(element, locator).click();
+			report.log("[Successful] Click the " + elementName);
+		} catch (Exception e) {
+			screenshot(elementName);
+			report.errorLog("[Fail] Unable to click");
+			Assert.fail();
+		}
+	}
 
 	public void select(String locator, Object value, String elementName) {
 		WebElement element = findElement(locator);
@@ -72,6 +94,19 @@ public class ElementUtils extends FindElement {
 		return msg;
 	}
 	
+	public String getText(WebElement elementHigher, String locator, String elementName) {
+		String msg = "";
+		try {
+			msg = findElement(elementHigher, locator).getText();
+			report.log("[Successful] Get the " + elementName);
+		} catch (Exception e) {
+			screenshot(elementName);
+			report.errorLog("[Fail] Get attribute failure");
+			Assert.fail();
+		}
+		return msg;
+	}
+	
 	public String getText(WebElement element, String elementName) {
 		String msg = "";
 		try {
@@ -83,6 +118,47 @@ public class ElementUtils extends FindElement {
 			Assert.fail();
 		}
 		return msg;
+	}
+	
+	public boolean isSelect(String locator, String elementName) {
+		WebElement element = findElement(locator);
+		boolean isSelected = true;
+		try {
+			isSelected = element.isSelected();
+			
+			if (isSelected) {
+				report.log("[Successful] " + elementName + " is already selected");
+			} else {
+				report.log("[Successful] " + elementName + " is not selected");
+			}
+			
+		} catch (Exception e) {
+			screenshot(elementName.toString());
+			report.errorLog("[Fail] Not to selected");
+			report.errorLog(e.toString());
+			Assert.fail();
+		}
+		return isSelected;
+	}
+	
+	public boolean isSelect(WebElement element, String elementName) {
+		boolean isSelected = true;
+		try {
+			isSelected = element.isSelected();
+			
+			if (isSelected) {
+				report.log("[Successful] " + elementName + " is already selected");
+			} else {
+				report.log("[Successful] " + elementName + " is not selected");
+			}
+			
+		} catch (Exception e) {
+			screenshot(elementName.toString());
+			report.errorLog("[Fail] Not to selected");
+			report.errorLog(e.toString());
+			Assert.fail();
+		}
+		return isSelected;
 	}
 
 	public void longPress(String locator, String elementName, int second) {

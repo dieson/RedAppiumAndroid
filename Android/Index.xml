@@ -6,8 +6,9 @@
 	    <parameter name="userName" value="dieson@lexisred.com" />
 	    <parameter name="passWord" value="dieson" />
 	    <parameter name="country" value="Australia" />
+	    <parameter name="titleName" value="Ritchie’s Uniform Civil Procedure NSW" />
 		<classes>
-			<class name="com.appium.Android_testcase.IndexTest" />
+			<class name="com.appium.Android.TestCaseNew.IndexTest" /><!-- Dieson -->
 		</classes>
 	</test>
 

@@ -3,12 +3,13 @@ package com.appium.driver;
 import org.openqa.selenium.WebElement;
 
 public class RedAndroid extends ElementUtils{
+	
 	public void waitProgress(){
 		WebElement element = null;
 		//system progress bar id is 'android:id/body'
 		try {
 			do{
-				element = driver.findElementById("android:id/body");
+				element = driver.findElementById("au.com.lexisnexis.lexisred:id/pbLoading");
 				wait(1);
 			}while(element != null);
 		} catch (Exception e) {
@@ -38,8 +39,44 @@ public class RedAndroid extends ElementUtils{
 	
 	public void findPublication(String titleName){
 		while(!isExistElement("NAME:" + titleName)){
-			driver.swipe(1200, 400, 100, 400, 3000);
+			super.swipe(2400, 800, 240, 800, "Find Publication");
 		}
 	}
 	
+	public boolean findGroup() {
+		
+		boolean isExist = false;
+		int i = 0;
+		do {
+			if(!super.isExistElement("ID:au.com.lexisnexis.lexisred:id/ivFolder")) {
+				super.swipe(2400, 800, 240, 800, "Find Group");
+			} else {
+				isExist = true;
+				break;
+			}
+			i++;
+		} while (i < 3);
+		
+		return isExist;
+	}
+	
+	public void onGroup() {
+		report.log("Open group mode.");
+		driver.findElementByXPath("//android.support.v7.widget.LinearLayoutCompat/android.widget.ImageView").click();
+		driver.findElementByXPath("//android.widget.LinearLayout[4]").click();
+		if (!driver.findElementById("au.com.lexisnexis.lexisred:id/ivCheckBox").isSelected()) {
+			driver.findElementById("au.com.lexisnexis.lexisred:id/ivCheckBox").click();
+		}
+		driver.findElementByXPath("//android.widget.LinearLayout/android.view.View/android.widget.ImageButton").click();
+	}
+	
+	public void offGroup() {
+		report.log("Off group mode.");
+		driver.findElementByXPath("//android.support.v7.widget.LinearLayoutCompat/android.widget.ImageView").click();
+		driver.findElementByXPath("//android.widget.LinearLayout[4]").click();
+		if (driver.findElementById("au.com.lexisnexis.lexisred:id/ivCheckBox").isSelected()) {
+			driver.findElementById("au.com.lexisnexis.lexisred:id/ivCheckBox").click();
+		}
+		driver.findElementByXPath("//android.widget.LinearLayout/android.view.View/android.widget.ImageButton").click();
+	}
 }

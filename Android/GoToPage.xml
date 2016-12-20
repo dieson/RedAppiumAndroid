@@ -6,9 +6,9 @@
 	    <parameter name="userName" value="dieson@lexisred.com" />
 	    <parameter name="passWord" value="dieson" />
 	    <parameter name="country" value="Australia" />
-	    <parameter name="titleName" value="0JVV-Legal commentry of NSW UO" />
+	    <parameter name="titleName" value="0JVV-Legal commentry of NSW NEW" />
 		<classes>
-			<class name="com.appium.Android_testcase.GoToTest" />
+			<class name="com.appium.Android.TestCaseNew.GoToTest" /><!-- Dieson -->
 		</classes>
 	</test>
 

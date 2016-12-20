@@ -6,8 +6,9 @@
 	    <parameter name="userName" value="dieson@lexisred.com" />
 	    <parameter name="passWord" value="dieson" />
 	    <parameter name="country" value="Australia" />
+	    <parameter name="searchText" value="updatedss" />
 		<classes>
-			<class name="com.appium.Android_testcase.AnnotationsTest" />
+			<class name="com.appium.Android.TestCaseNew.AnnotationsTest" /><!-- Dieson -->
 		</classes>
 	</test>
 
