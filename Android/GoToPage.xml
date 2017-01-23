@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GoTO Page" parallel="false">
+
+	<test name="GoTO Page test">
+	    <parameter name="userName" value="dieson@lexisred.com" />
+	    <parameter name="passWord" value="dieson" />
+	    <parameter name="country" value="Australia" />
+	    <parameter name="titleName" value="0JVV-Legal commentry of NSW NEW" />
+		<classes>
+			<class name="com.appium.Android.TestCaseNew.GoToTest" />
+			<!-- Dieson 由PBO title不时当变，故未置于CI-->
+		</classes>
+	</test>
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+	</listeners>
+</suite> <!-- Suite -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ExpandGroup" parallel="false">
+
+	<test name="ExpandGroup test">
+	    <parameter name="userName" value="dieson@lexisred.com" />
+	    <parameter name="passWord" value="dieson" />
+	    <parameter name="country" value="Australia" />
+		<classes>
+			<class name="com.appium.Android.TestCaseNew.ExpandGroupTest" /><!-- Nikitta -->
+		</classes>
+	</test>
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+	</listeners>
+</suite> <!-- Suite -->

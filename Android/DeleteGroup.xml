@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DeleteGroup" parallel="false">
+
+	<test name="DeleteGroup test">
+	    <parameter name="userName" value="dieson@lexisred.com" />
+	    <parameter name="passWord" value="dieson" />
+	    <parameter name="country" value="Australia" />
+		<classes>
+			<class name="com.appium.Android.TestCaseNew.DeleteGroupTest" />
+			<!-- Dieson Android删其Group所需左曳element，取Group之序及坐标需大改脚本-->
+		</classes>
+	</test>
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+	</listeners>
+</suite> <!-- Suite -->
