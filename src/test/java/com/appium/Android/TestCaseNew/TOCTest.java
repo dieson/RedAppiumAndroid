@@ -30,8 +30,8 @@ public class TOCTest {
 	public void beforeTest(String userName, String passWord, String country) {
 		
 		screen = new RedAndroid();
-		LoginPage login = new LoginPage(screen);
-		login.loginAndroid(userName, passWord, country);
+		/*LoginPage login = new LoginPage(screen);
+		login.loginAndroid(userName, passWord, country);*/
 		screen.offGroup();
 		toc = new TOCPage(screen);
 		
@@ -39,8 +39,8 @@ public class TOCTest {
 
 	@AfterTest
 	public void afterTest() {
-		LogoutPage logout = new LogoutPage(screen);
-		logout.logoutAndroid();
+		/*LogoutPage logout = new LogoutPage(screen);
+		logout.logoutAndroid();*/
 		screen.quit();
 	}
 	

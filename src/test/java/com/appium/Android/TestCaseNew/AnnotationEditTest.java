@@ -34,17 +34,16 @@ public class AnnotationEditTest {
 	public void beforeTest(String userNameData, String passWordData, String countryData) {
 		
 		screen = new RedAndroid();
-		LoginPage loginPage = new LoginPage(screen);
-		loginPage.skipTour();
-		loginPage.loginAndroid(userNameData, passWordData, countryData);
+		/*LoginPage loginPage = new LoginPage(screen);
+		loginPage.loginAndroid(userNameData, passWordData, countryData);*/
 		annotation = new AnnotationEditPage(screen);
 	}
 
 	@AfterTest
 	public void afterTest() {
 		
-		LogoutPage logoutPage = new LogoutPage(screen);
-		logoutPage.logoutAndroid();
+		/*LogoutPage logoutPage = new LogoutPage(screen);
+		logoutPage.logoutAndroid();*/
 		screen.quit();
 	}
 
