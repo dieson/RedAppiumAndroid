@@ -23,8 +23,8 @@ public class LogoutTest {
 	@BeforeTest
 	public void beforeTest(String userNameData, String passWordData, String countryData) {
 		screen = new RedAndroid();
-		loginPage = new LoginPage(screen);
-		loginPage.loginAndroid(userNameData, passWordData, countryData);
+		/*loginPage = new LoginPage(screen);
+		loginPage.loginAndroid(userNameData, passWordData, countryData);*/
 	}
 
 	@AfterTest

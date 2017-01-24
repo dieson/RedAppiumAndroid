@@ -26,8 +26,8 @@ public class DownloadTest {
 	public void beforeTest(String userName, String passWord, String country) {
 
 		screen = new RedAndroid();
-		/*LoginPage login = new LoginPage(screen);
-		login.loginAndroid(userName, passWord, country);*/
+		LoginPage login = new LoginPage(screen);
+		login.loginAndroid(userName, passWord, country);
 	}
 
 	@AfterTest
