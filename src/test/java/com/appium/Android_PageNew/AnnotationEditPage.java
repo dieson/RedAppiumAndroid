@@ -12,6 +12,7 @@ import com.appium.driver.BaseScreen;
 import com.appium.driver.RedAndroid;
 import com.appium.utils.PropertyUtils;
 
+
 /**
  * @author Dieson Zuo
  * @date Nov 10, 2016 10:19:19 AM
@@ -107,7 +108,7 @@ public class AnnotationEditPage extends BaseScreen {
 			// Get note name
 			String notetext = screen.getText(annotations.get(i), noteText, "Note Text");
 			
-			Assert.assertEquals(notetext, "test add");
+			Assert.assertEquals(notetext, "AUTHORS OF COMPANIES COMMENTARY");
 		}
 
 		// Add tag.
@@ -153,7 +154,7 @@ public class AnnotationEditPage extends BaseScreen {
 			// Get the note text
 			String notetext = screen.getText(annotations.get(i), noteText, "Note Text");
 			
-			Assert.assertEquals(notetext, "test edit");
+			Assert.assertEquals(notetext, "Insolvency Practitioners Heading");
 		}
 
 		// Edit tag.
