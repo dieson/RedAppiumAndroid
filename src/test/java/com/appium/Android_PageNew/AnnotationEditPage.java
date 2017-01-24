@@ -74,13 +74,13 @@ public class AnnotationEditPage extends BaseScreen {
 		screen.click(addHighlight, "Add Highlight");
 		// Get the tag name
 		List<WebElement> tags = screen.findElements(tagItem);
-		String tagName = screen.getText(tags.get(0), tag, "Tag Name");
+		//String tagName = screen.getText(tags.get(0), tag, "Tag Name");
 		screen.click(screen.findElement(tags.get(0), tagSelected), "Tag");
 		// Get the tag name in annotation navigator
 		screen.tap(1200, 200);
 		screen.click(annotationPage, "Annotations Navigator");
-		WebElement tagNavigator = screen.findElement(screen.findElements(annotationItem).get(0), tag);
-		String tagNameNavigator = screen.getText(tagNavigator, "Tag Name In Navigator");
+		//WebElement tagNavigator = screen.findElement(screen.findElements(annotationItem).get(0), tag);
+		//String tagNameNavigator = screen.getText(tagNavigator, "Tag Name In Navigator");
 		
 		screen.click(backButton, "Back Button");
 		
@@ -102,7 +102,7 @@ public class AnnotationEditPage extends BaseScreen {
 			// Add note
 			WebElement addnote = screen.findElement(annotations.get(i), addNote);
 			screen.click(addnote, "Add Note");
-			screen.input(note, "test add", "Note");
+			screen.input(note, "AUTHORS OF COMPANIES COMMENTARY", "Note");
 			screen.tap(200, 200);
 			// Get note name
 			String notetext = screen.getText(annotations.get(i), noteText, "Note Text");
@@ -148,7 +148,7 @@ public class AnnotationEditPage extends BaseScreen {
 			// Edit note
 			WebElement editNote = screen.findElement(annotations.get(i), noteText);
 			screen.click(editNote, "Edit Note");
-			screen.input(note, "test edit", "Note");
+			screen.input(note, "Insolvency Practitioners Heading", "Note");
 			screen.tap(1200, 200);
 			// Get the note text
 			String notetext = screen.getText(annotations.get(i), noteText, "Note Text");
