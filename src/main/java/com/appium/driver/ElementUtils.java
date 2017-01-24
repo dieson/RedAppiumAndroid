@@ -18,6 +18,7 @@ public class ElementUtils extends FindElement {
 		} catch (Exception e) {
 			screenshot(elementName);
 			report.errorLog("[Fail] Unable to input");
+			report.log(e.toString());
 			Assert.fail();
 		}
 	}
@@ -29,6 +30,7 @@ public class ElementUtils extends FindElement {
 		} catch (Exception e) {
 			screenshot(elementName);
 			report.errorLog("[Fail] Unable to Clear the " + elementName);
+			report.log(e.toString());
 			Assert.fail();
 		}
 	}
@@ -40,6 +42,7 @@ public class ElementUtils extends FindElement {
 		} catch (Exception e) {
 			screenshot(elementName);
 			report.errorLog("[Fail] Unable to click");
+			report.log(e.toString());
 			Assert.fail();
 		}
 	}
@@ -51,6 +54,7 @@ public class ElementUtils extends FindElement {
 		} catch (Exception e) {
 			screenshot(elementName);
 			report.errorLog("[Fail] Unable to click");
+			report.log(e.toString());
 			Assert.fail();
 		}
 	}
@@ -62,6 +66,7 @@ public class ElementUtils extends FindElement {
 		} catch (Exception e) {
 			screenshot(elementName);
 			report.errorLog("[Fail] Unable to click");
+			report.log(e.toString());
 			Assert.fail();
 		}
 	}
@@ -89,6 +94,7 @@ public class ElementUtils extends FindElement {
 		} catch (Exception e) {
 			screenshot(elementName);
 			report.errorLog("[Fail] Get attribute failure");
+			report.log(e.toString());
 			Assert.fail();
 		}
 		return msg;
@@ -102,6 +108,7 @@ public class ElementUtils extends FindElement {
 		} catch (Exception e) {
 			screenshot(elementName);
 			report.errorLog("[Fail] Get attribute failure");
+			report.log(e.toString());
 			Assert.fail();
 		}
 		return msg;
@@ -115,6 +122,7 @@ public class ElementUtils extends FindElement {
 		} catch (Exception e) {
 			screenshot(elementName);
 			report.errorLog("[Fail] Get attribute failure");
+			report.log(e.toString());
 			Assert.fail();
 		}
 		return msg;
