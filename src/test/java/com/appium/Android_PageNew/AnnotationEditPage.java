@@ -1,6 +1,5 @@
 package com.appium.Android_PageNew;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -75,17 +74,17 @@ public class AnnotationEditPage extends BaseScreen {
 		screen.click(addHighlight, "Add Highlight");
 		// Get the tag name
 		List<WebElement> tags = screen.findElements(tagItem);
-		//String tagName = screen.getText(tags.get(0), tag, "Tag Name");
+		String tagName = screen.getText(tags.get(0), tag, "Tag Name");
 		screen.click(screen.findElement(tags.get(0), tagSelected), "Tag");
 		// Get the tag name in annotation navigator
 		screen.tap(1200, 200);
 		screen.click(annotationPage, "Annotations Navigator");
-		//WebElement tagNavigator = screen.findElement(screen.findElements(annotationItem).get(0), tag);
-		//String tagNameNavigator = screen.getText(tagNavigator, "Tag Name In Navigator");
+		WebElement tagNavigator = screen.findElement(screen.findElements(annotationItem).get(0), tag);
+		String tagNameNavigator = screen.getText(tagNavigator, "Tag Name In Navigator");
 		
 		screen.click(backButton, "Back Button");
 		
-		//Assert.assertEquals(tagNameNavigator, tagName);
+		Assert.assertEquals(tagNameNavigator, tagName);
 	}
 
 	public void addNoteTag() {
@@ -158,7 +157,7 @@ public class AnnotationEditPage extends BaseScreen {
 		}
 
 		// Edit tag.
-		for (int j = 0; j < annotations.size(); j++) {
+		/*for (int j = 0; j < annotations.size(); j++) {
 			
 			if (!screen.getText(annotations.get(j), tag, "Tag Name").equals("Add a tag...")) {
 				// Open the edit pop-up window
@@ -184,7 +183,7 @@ public class AnnotationEditPage extends BaseScreen {
 				Assert.assertEquals(tagTitleAfter.containsAll(tagTitleSelect), true);
 				break;
 			}
-		}
+		}*/
 
 	}
 
