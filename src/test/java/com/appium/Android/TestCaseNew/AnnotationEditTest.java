@@ -34,8 +34,8 @@ public class AnnotationEditTest {
 	public void beforeTest(String userNameData, String passWordData, String countryData) {
 		
 		screen = new RedAndroid();
-		/*LoginPage loginPage = new LoginPage(screen);
-		loginPage.loginAndroid(userNameData, passWordData, countryData);*/
+		LoginPage loginPage = new LoginPage(screen);
+		loginPage.loginAndroid(userNameData, passWordData, countryData);
 		annotation = new AnnotationEditPage(screen);
 	}
 

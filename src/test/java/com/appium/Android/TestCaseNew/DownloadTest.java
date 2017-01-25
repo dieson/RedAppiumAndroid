@@ -32,8 +32,8 @@ public class DownloadTest {
 
 	@AfterTest
 	public void afterTest() {
-		/*LogoutPage logout = new LogoutPage(screen);
-		logout.logoutAndroid();*/
+		LogoutPage logout = new LogoutPage(screen);
+		logout.logoutAndroid();
 		screen.quit();
 	}
 	

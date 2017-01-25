@@ -1,164 +1,80 @@
 package com.appium.Android.TestCaseNew;
 
-
-import java.util.Iterator;
-import java.util.Map;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.appium.Android_PageNew.DeleteGroupPage;
-import com.appium.Android_PageNew.DocumentNamePage;
-import com.appium.Android_PageNew.ExpandGroupPage;
-import com.appium.Android_PageNew.FilterPubInGroupPage;
-import com.appium.Android_PageNew.HVTitleNamePage;
-import com.appium.Android_PageNew.InternetMsgPage;
+import com.appium.Android_PageNew.AnnotationEditPage;
+import com.appium.Android_PageNew.DownloadPage;
 import com.appium.Android_PageNew.LoginPage;
+import com.appium.Android_PageNew.LogoutPage;
 import com.appium.Android_PageNew.PublicationPage;
-import com.appium.Android_PageNew.PublicationSearchPage;
-import com.appium.Android_PageNew.RemPasswordInChangePage;
-import com.appium.Android_PageNew.RememberPage;
-import com.appium.Android_PageNew.RememberPasswordPage;
-import com.appium.datautils.ExcelUtils;
+import com.appium.Android_PageNew.TOCPage;
 import com.appium.driver.RedAndroid;
 
 public class ALLTest {
-	
+
 	private RedAndroid screen;
-	private ExcelUtils excel;
-	private InternetMsgPage internetMsg;
-	private RememberPasswordPage rememberPassword;
-	private LoginPage login;
-	private RememberPage remember;
-	private RemPasswordInChangePage remPasswordInChange;
-	private DocumentNamePage documentName;
+	private TOCPage toc;
+	private AnnotationEditPage annotation;
 
+	@Test
+	public void download() {
 
-	@Test (priority = 1)
-	public void internetMsg() {
-		
-		internetMsg = new InternetMsgPage(screen);
-		internetMsg.skipTour();
-		internetMsg.internetMsgTest("nikitta@lexisred.com", "123465");
-	
+		DownloadPage download = new DownloadPage(screen);
+		download.downloadAll();
 	}
-	
-	@Test (priority = 2)
-	public void remPasswordTest() {
-		
-		
-		rememberPassword = new RememberPasswordPage(screen);
-		rememberPassword.remPasswordTest("kenny@lexisred.com", "1234");
-	}
-	
-	//@Test (priority = 3)
-	//public void rememberPasswordDeselect() {
-		
-		//login = new LoginPage(screen);
-		//login.skipTour();
-		//login.remember("dieson@lexisred.com", "dieson", "Australia");
-	//}
-	
-	
-	@Test (priority = 4)
-	public void rememberPasswords() {
-		
-		login = new LoginPage(screen);
-		remember = new RememberPage(screen);
-		login.skipTour();
-		remember.rememberPasswordA("echo.hu@lexisnexis.com", "qwer", "Australia");
-		remember.rememberPasswordB("nikitta@lexisred.com", "123465", "Australia");
-		remember.rememberPasswordC("echo.hu@lexisnexis.com", "qwer", "Australia");
-		remember.rememberPasswordD("nikitta@lexisred.com", "123465", "Australia");
-	}
-	
-	@Test (priority = 5)
-	public void remPasswordInChangeTest() {
-		
-		
-		remPasswordInChange = new RemPasswordInChangePage(screen);
-		remPasswordInChange.remPasswordInChangeTest("kenny@lexisred.com","81dc9bdb52d04dc20036dbd8313ed055","1234");
-	}
-	
-	@Test (priority = 6)
-	public void documentNameTest() {
-		
-		documentName = new DocumentNamePage(screen);
-		documentName.documentNameTest();
-	
-	}
-	
-	//@Test (priority = 7)
-	//public void previousNextTest() {
-		
-		//TOCPage toc = new TOCPage(screen);
-		//toc.previousNext();
-	//}
-	
-	@Test(priority = 8, dataProvider = "dp")
-	public void searchTest(Map<String, Object> data) {
-		
-		PublicationSearchPage search = new PublicationSearchPage(screen, data, excel);
-		search.search();
-	}
-	
-	@Test (priority = 9)
+
+	@Test(dependsOnMethods = "download")
 	public void groupTest() {
-		
+
 		PublicationPage publication = new PublicationPage(screen);
-		publication.checkSingle();
-		publication.checkGroup();
+		publication.groupSingle();
 	}
-	
-	@Test (priority = 10)
-	public void hvTitlNameTest() {
-		
-		
-		HVTitleNamePage hvTitleName = new HVTitleNamePage(screen);
-		hvTitleName.hvTitleNameTest();
+
+	@Test(dependsOnMethods = "groupTest")
+	public void hideTOCTest() {
+		screen.offGroup();
+		toc = new TOCPage(screen);
+		toc.hideTOC();
 	}
-	
-	@Test (priority = 11)
-	public void expandGroupTest() {
-		
-		
-		ExpandGroupPage expandGroup = new ExpandGroupPage(screen);
-		expandGroup.expandGroupTest();
+
+	@Test(dependsOnMethods = "hideTOCTest")
+	public void previousNextTest() {
+		toc.previousNext();
 	}
-	
-	@Test (priority = 12)
-	public void filterPubInGroupTest() {
-		
-		
-		FilterPubInGroupPage filterG = new FilterPubInGroupPage(screen);
-		filterG.filterPubInGroupTest();
+
+	@Test(dependsOnMethods = "previousNextTest")
+	public void addAnnotationTest() {
+		annotation = new AnnotationEditPage(screen);
+		annotation.addAnnotation();
 	}
-	
-	@Test (priority = 13)
-	public void deletegroup() {
-		
-		login = new LoginPage(screen);
-		login.skipTour();
-		DeleteGroupPage deletegroup = new DeleteGroupPage(screen);
-		deletegroup.deletegroup();
+
+	@Test(dependsOnMethods = "addAnnotationTest")
+	public void addNoteTagTest() {
+		annotation.addNoteTag();
 	}
-	
+
+	@Test(dependsOnMethods = "addNoteTagTest")
+	public void editNoteTagTest() {
+		annotation.editNoteTag();
+	}
+
+	@Parameters({ "userName", "passWord", "country" })
 	@BeforeTest
-	public void beforeMethod() {
-		
+	public void beforeTest(String userName, String passWord, String country) {
+
 		screen = new RedAndroid();
+		LoginPage login = new LoginPage(screen);
+		login.loginAndroid(userName, passWord, country);
 	}
 
 	@AfterTest
-	public void afterMethod() {
+	public void afterTest() {
+		LogoutPage logout = new LogoutPage(screen);
+		logout.logoutAndroid();
 		screen.quit();
 	}
 
-	@DataProvider(name = "dp")
-	public Iterator<Object[]> testData() throws Exception {
-		excel = new ExcelUtils("Android.xls", "Search");
-		return excel;
-	}
 }
