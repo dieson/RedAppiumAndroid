@@ -1,5 +1,6 @@
 package com.appium.Android_PageNew;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -139,7 +140,7 @@ public class AnnotationEditPage extends BaseScreen {
 		List<WebElement> annotations = screen.findElements(annotationList, annotationItem);
 
 		// Edit note.
-		if (screen.isExistElement(noteText)) {
+		/*if (screen.isExistElement(noteText)) {
 			
 			int i = 0;
 			while (!screen.isExistElement(annotations.get(i), noteText)) {
@@ -154,10 +155,10 @@ public class AnnotationEditPage extends BaseScreen {
 			String notetext = screen.getText(annotations.get(i), noteText, "Note Text");
 			
 			Assert.assertEquals(notetext, "Insolvency Practitioners Heading");
-		}
+		}*/
 
 		// Edit tag.
-		/*for (int j = 0; j < annotations.size(); j++) {
+		for (int j = 0; j < annotations.size(); j++) {
 			
 			if (!screen.getText(annotations.get(j), tag, "Tag Name").equals("Add a tag...")) {
 				// Open the edit pop-up window
@@ -183,7 +184,7 @@ public class AnnotationEditPage extends BaseScreen {
 				Assert.assertEquals(tagTitleAfter.containsAll(tagTitleSelect), true);
 				break;
 			}
-		}*/
+		}
 
 	}
 
