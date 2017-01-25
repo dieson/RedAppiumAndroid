@@ -69,7 +69,7 @@ public class AnnotationEditPage extends BaseScreen {
 					tocNameV = screen.getText(screen.findElement(tocListV.get(x - 1), tocName), "TOC Name");
 				}
 			}
-			screen.tap(view.x + 150, view.y + 180, 3000);
+			screen.tap(440, 240, 3000);
 		} while (!screen.isExistElement(addHighlight));
 		// Add annotation
 		screen.click(addHighlight, "Add Highlight");
