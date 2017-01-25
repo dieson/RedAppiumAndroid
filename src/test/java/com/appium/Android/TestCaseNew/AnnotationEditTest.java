@@ -42,8 +42,8 @@ public class AnnotationEditTest {
 	@AfterTest
 	public void afterTest() {
 		
-		/*LogoutPage logoutPage = new LogoutPage(screen);
-		logoutPage.logoutAndroid();*/
+		LogoutPage logoutPage = new LogoutPage(screen);
+		logoutPage.logoutAndroid();
 		screen.quit();
 	}
 
