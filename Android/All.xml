@@ -6,7 +6,7 @@
 		<parameter name="passWord" value="dieson" />
 		<parameter name="country" value="Australia" />
 		<classes>
-			<class name="com.appium.Android_testcase.AllTest" />
+			<class name="com.appium.Android.TestCaseNew.ALLTest" />
 		</classes>
 	</test>
 
