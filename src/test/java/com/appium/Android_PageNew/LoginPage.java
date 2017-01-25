@@ -57,6 +57,7 @@ public class LoginPage extends BaseScreen {
 	}
 
 	public void loginAndroid(String userNameData, String passWordData, String countryData) {
+		screen.wait(3);
 		this.skipTour();
 		screen.input(userName, userNameData, "username");
 		screen.input(passWord, passWordData, "password");
