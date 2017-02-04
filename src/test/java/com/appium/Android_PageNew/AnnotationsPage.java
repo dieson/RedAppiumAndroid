@@ -119,6 +119,7 @@ public class AnnotationsPage extends BaseScreen {
 		screen.click(searchButton, "Search Button");
 		screen.input(searchText, text, "Search Text");
 		screen.sendKey(searchText, 66, "Search");
+		screen.wait(5);
 		
 		String titleNameOrg = "";
 		String tocNameOrg = "";
