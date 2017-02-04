@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.appium.Android_PageNew.AnnotationEditPage;
 import com.appium.Android_PageNew.AnnotationsPage;
 import com.appium.Android_PageNew.DownloadPage;
+import com.appium.Android_PageNew.GoToPage;
 import com.appium.Android_PageNew.LoginPage;
 import com.appium.Android_PageNew.LogoutPage;
 import com.appium.Android_PageNew.PublicationPage;
@@ -66,6 +67,12 @@ public class ALLTest {
 	public void annotation() {
 		AnnotationsPage annotations = new AnnotationsPage(screen);
 		annotations.searchAnnotations("updateds");
+	}
+	
+	@Test(dependsOnMethods = "editNoteTagTest")
+	public void gotoPageTest() {
+		GoToPage gotoPage = new GoToPage(screen);
+		gotoPage.gotoPage("0JVV-Legal commentry of NSW NEW");
 	}
 
 	@Parameters({ "userName", "passWord", "country" })
