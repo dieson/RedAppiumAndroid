@@ -6,6 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.appium.Android_PageNew.AnnotationEditPage;
+import com.appium.Android_PageNew.AnnotationsPage;
 import com.appium.Android_PageNew.DownloadPage;
 import com.appium.Android_PageNew.LoginPage;
 import com.appium.Android_PageNew.LogoutPage;
@@ -59,6 +60,12 @@ public class ALLTest {
 	@Test(dependsOnMethods = "addNoteTagTest")
 	public void editNoteTagTest() {
 		annotation.editNoteTag();
+	}
+	
+	@Test(dependsOnMethods = "editNoteTagTest")
+	public void annotation() {
+		AnnotationsPage annotations = new AnnotationsPage(screen);
+		annotations.searchAnnotations("updateds");
 	}
 
 	@Parameters({ "userName", "passWord", "country" })
