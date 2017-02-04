@@ -123,7 +123,7 @@ public class AnnotationsPage extends BaseScreen {
 		
 		String titleNameOrg = "";
 		String tocNameOrg = "";
-		if (!screen.isExistElement(noAnnotations)) {
+		/*if (!screen.isExistElement(noAnnotations)) {
 			// Search results is not null.
 			List<WebElement> antList = screen.findElements(annotationsList);
 			for (WebElement webElement : antList) {
@@ -147,8 +147,8 @@ public class AnnotationsPage extends BaseScreen {
 			
 		} else {
 			screen.click(publications, "Publication Screen");
-		}
-		
+		}*/
+		screen.click(publications, "Publication Screen");
 	}
 
 }
