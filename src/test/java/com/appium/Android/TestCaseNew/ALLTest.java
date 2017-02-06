@@ -71,6 +71,7 @@ public class ALLTest {
 	
 	@Test(dependsOnMethods = "annotation")
 	public void gotoPageTest() {
+		screen.wait(3);
 		GoToPage gotoPage = new GoToPage(screen);
 		gotoPage.gotoPage("0JVV-Legal commentry of NSW NEW");
 	}
