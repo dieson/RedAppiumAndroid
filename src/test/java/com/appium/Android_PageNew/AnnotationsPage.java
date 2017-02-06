@@ -115,7 +115,7 @@ public class AnnotationsPage extends BaseScreen {
 	
 	public void searchAnnotations() {
 		screen.click(annotations, "Annotations Organise");
-		List<WebElement> searchTexts = screen.findElements("au.com.lexisnexis.lexisred.preview:id/tvExcerptText");
+		List<WebElement> searchTexts = screen.findElements("ID:au.com.lexisnexis.lexisred.preview:id/tvExcerptText");
 		String text = screen.getText(searchTexts.get(0), "Search Text");
 		//Search annotations
 		screen.click(searchButton, "Search Button");
