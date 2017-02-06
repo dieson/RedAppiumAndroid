@@ -69,7 +69,7 @@ public class ALLTest {
 		annotations.searchAnnotations("updateds");
 	}
 	
-	@Test(dependsOnMethods = "editNoteTagTest")
+	@Test(dependsOnMethods = "annotation")
 	public void gotoPageTest() {
 		GoToPage gotoPage = new GoToPage(screen);
 		gotoPage.gotoPage("0JVV-Legal commentry of NSW NEW");
