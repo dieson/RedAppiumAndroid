@@ -69,13 +69,6 @@ public class ALLTest {
 		annotations.searchAnnotations("updateds");
 	}
 	
-	@Test(dependsOnMethods = "annotation")
-	public void gotoPageTest() {
-		screen.wait(3);
-		GoToPage gotoPage = new GoToPage(screen);
-		gotoPage.gotoPage("0JVV-Legal commentry of NSW NEW");
-	}
-
 	@Parameters({ "userName", "passWord", "country" })
 	@BeforeTest
 	public void beforeTest(String userName, String passWord, String country) {
