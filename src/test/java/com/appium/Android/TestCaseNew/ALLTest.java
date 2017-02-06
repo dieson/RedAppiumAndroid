@@ -66,7 +66,7 @@ public class ALLTest {
 	@Test(dependsOnMethods = "editNoteTagTest")
 	public void annotation() {
 		AnnotationsPage annotations = new AnnotationsPage(screen);
-		annotations.searchAnnotations("updateds");
+		annotations.searchAnnotations();
 	}
 	
 	@Parameters({ "userName", "passWord", "country" })

@@ -13,17 +13,15 @@ import com.appium.driver.RedAndroid;
 public class AnnotationsTest {
 	private RedAndroid screen;
 	private AnnotationsPage annotations;
-	private String searchText;
 	
 	@Test
 	public void annotation() {
-		annotations.searchAnnotations(searchText);
+		annotations.searchAnnotations();
 	}
 	
-	@Parameters({"userName", "passWord", "country", "searchText"})
+	@Parameters({"userName", "passWord", "country"})
 	@BeforeTest
-	public void beforeTest(String userNameData, String passWordData, String countryData, String searchText) {
-		this.searchText = searchText;
+	public void beforeTest(String userNameData, String passWordData, String countryData) {
 		screen = new RedAndroid();
 		annotations = new AnnotationsPage(screen);
 		LoginPage loginPage = new LoginPage(screen);

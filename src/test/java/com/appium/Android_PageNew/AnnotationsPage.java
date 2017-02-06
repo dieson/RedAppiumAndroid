@@ -113,10 +113,12 @@ public class AnnotationsPage extends BaseScreen {
 		Assert.assertEquals(element.equals(null), false);
 	}
 	
-	public void searchAnnotations(String text) {
+	public void searchAnnotations() {
 		screen.click(annotations, "Annotations Organise");
 		//Search annotations
 		screen.click(searchButton, "Search Button");
+		List<WebElement> searchTexts = screen.findElements("au.com.lexisnexis.lexisred.preview:id/tvExcerptText");
+		String text = screen.getText(searchTexts.get(0), "Search Text");
 		screen.input(searchText, text, "Search Text");
 		screen.sendKey(searchText, 66, "Search");
 		screen.wait(5);
