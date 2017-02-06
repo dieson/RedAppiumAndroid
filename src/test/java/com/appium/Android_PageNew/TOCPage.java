@@ -60,6 +60,7 @@ public class TOCPage extends BaseScreen {
 			int x = (int) (i + Math.random() * (tocI - i));
 			tocNameI = screen.getText(screen.findElement(tocListI.get(x - 1), tocName), "TOC Name");
 			tocListI.get(x - 1).click();
+			screen.waitProgress();
 
 			List<WebElement> tocListV = screen.findElements(toclist);
 			int tocV = tocListV.size();
