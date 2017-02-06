@@ -1,7 +1,9 @@
 package com.appium.Android_PageNew;
 
+import java.util.List;
 import java.util.Properties;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.appium.driver.BaseScreen;
@@ -33,7 +35,7 @@ public class GoToPage extends BaseScreen{
 	private final String titleList = GOTO_PAGE.getProperty("ANDROID_TITLELIST");
 	private final String publication = GOTO_PAGE.getProperty("ANDROID_PUBLICATION");
 	private final String publicationList = GOTO_PAGE.getProperty("ANDROID_PUBLICATIONLIST");
-	
+	private final String bookTitle = GOTO_PAGE.getProperty("ANDROID_BOOKTITLE");
 
 
 	
@@ -90,24 +92,21 @@ public class GoToPage extends BaseScreen{
 	 */
 	public void gotoPage(String titleName){
 		
-		// Get the title number
-		screen.click(option, "Setting");
-		screen.click(organise, "Organise Publications");
-		if (screen.isSelect(grouped, "Grouped publications")) {
-				screen.click(grouped, "Grouped publications");
-		}
 		int i = 0;
-		while (i < screen.findElements(titleList).size()) {
-			String title = screen.getText(titleList + "[" + (i+1) + "]/android.widget.LinearLayout/android.widget.TextView", "Title Name");
-			if (title.equals(titleName)) {
-				i += 1;
-				break;
+		flag: while (true) {
+			List<WebElement> titles = screen.findElements(titleList);
+			while (i < titles.size()) {
+				String title = screen.getText(titles.get(i), bookTitle, "Book Title");
+				if (title.equals(titleName)) {
+					screen.click(titles.get(i), "Publication");
+					break flag;
+				}
+				i++;
 			}
-			i++;
+			i = 0;
+			screen.swipe(1000, 400, 100, 400, "Publication");
 		}
-		screen.click(publication, "Organise Publications");
 		// Open the PBO title
-		screen.click(publicationList + "[" + i + "]", "Publication");
 		screen.waitProgress();
 		// Go to page
 		screen.click(gotoButton, "GoTo Button");
